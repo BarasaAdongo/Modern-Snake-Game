@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Snake Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <script>
+        console.log('Document loaded and ready to initialize game');
+    </script>
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <div class="header-top">
+                <h1>Snake Game</h1>
+                <button id="darkModeToggle" class="dark-mode-toggle">
+                    <span class="light-icon">☀️</span>
+                    <span class="dark-icon">🌙</span>
+                </button>
+            </div>
+            <div class="score-container">
+                <div class="score">Score: <span id="score">0</span></div>
+                <div class="high-score">High Score: <span id="highScore">0</span></div>
+            </div>
+        </header>
+        
+        <div class="game-area">
+            <canvas id="gameCanvas"></canvas>
+            
+            <button id="pauseButton" class="pause-button">II</button>
+            
+            <div id="gameOverModal" class="modal">
+                <div class="modal-content">
+                    <h2>Game Over!</h2>
+                    <p>Your score: <span id="finalScore">0</span></p>
+                    <button id="restartButton">Play Again</button>
+                </div>
+            </div>
+            
+            <div id="startScreen" class="modal active">
+                <div class="modal-content">
+                    <h2>Snake Game</h2>
+                    <p>Use arrow keys or WASD to move</p>
+                    <p>Press SPACE to pause/resume</p>
+                    <button id="startButton">Start Game</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <div class="controls-row">
+                <button id="upButton">↑</button>
+            </div>
+            <div class="controls-row">
+                <button id="leftButton">←</button>
+                <button id="downButton">↓</button>
+                <button id="rightButton">→</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html> 
